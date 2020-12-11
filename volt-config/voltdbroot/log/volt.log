@@ -1,0 +1,687 @@
+2020-12-06 08:49:34,583   INFO  [main] HOST: PID of this Volt process is 25
+2020-12-06 08:49:34,625   INFO  [main] HOST: Command line arguments: org.voltdb.VoltDB initialize deployment /tmp/deployment.xml voltdbroot /var/voltdb/
+2020-12-06 08:49:34,630   INFO  [main] HOST: Command line JVM arguments: -Xmx2048m -Djava.awt.headless=true -Djavax.security.auth.useSubjectCredsOnly=false -Dsun.net.inetaddr.ttl=300 -Dsun.net.inetaddr.negative.ttl=3600 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseTLAB -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCondCardMark -Dsun.rmi.dgc.server.gcInterval=9223372036854775807 -Dsun.rmi.dgc.client.gcInterval=9223372036854775807 -XX:CMSWaitDuration=120000 -XX:CMSMaxAbortablePrecleanTime=120000 -XX:+ExplicitGCInvokesConcurrent -XX:+CMSScavengeBeforeRemark -XX:+CMSClassUnloadingEnabled -XX:+PerfDisableSharedMem -Dlog4j.configuration=file:///opt/voltdb/voltdb/log4j.xml -Djava.library.path=default
+2020-12-06 08:49:34,631   INFO  [main] HOST: Command line JVM classpath: /opt/voltdb/voltdb/voltdb-9.2.1.jar:/opt/voltdb/lib/netty-tcnative-boringssl-static-2.0.20.Final.jar:/opt/voltdb/lib/jetty-server-9.4.15.v20190215.jar:/opt/voltdb/lib/httpcore-4.3.3.jar:/opt/voltdb/lib/slf4j-api-1.6.2.jar:/opt/voltdb/lib/tomcat-juli.jar:/opt/voltdb/lib/httpcore-nio-4.3.2.jar:/opt/voltdb/lib/calcite-core-1.17.0-sources.jar:/opt/voltdb/lib/calcite-linq4j-1.17.0.jar:/opt/voltdb/lib/servlet-api-3.1.jar:/opt/voltdb/lib/jetty-util-9.4.15.v20190215.jar:/opt/voltdb/lib/metrics-core-2.2.0.jar:/opt/voltdb/lib/httpclient-4.3.6.jar:/opt/voltdb/lib/guava-26.0-jre.jar:/opt/voltdb/lib/cron-java8-1.5.jar:/opt/voltdb/lib/jetty-io-9.4.15.v20190215.jar:/opt/voltdb/lib/avatica-core-1.12.0-sources.jar:/opt/voltdb/lib/calcite-linq4j-1.17.0-sources.jar:/opt/voltdb/lib/super-csv-2.1.0.jar:/opt/voltdb/lib/tomcat-jdbc.jar:/opt/voltdb/lib/scala-xml_2.11-1.0.2.jar:/opt/voltdb/lib/jetty-continuation-9.4.15.v20190215.jar:/opt/voltdb/lib/avatica-core-1.12.0.jar:/opt/voltdb/lib/janino-2.7.6.jar:/opt/voltdb/lib/jaxb-core-2.3.0.1.jar:/opt/voltdb/lib/javax.annotation-api-1.3.2.jar:/opt/voltdb/lib/commons-logging-1.1.3.jar:/opt/voltdb/lib/jaxb-runtime-2.3.0.1.jar:/opt/voltdb/lib/jline-2.10.jar:/opt/voltdb/lib/jsch-0.1.51.jar:/opt/voltdb/lib/lz4-1.2.0.jar:/opt/voltdb/lib/log4j-1.2.16.jar:/opt/voltdb/lib/javax.activation-api-1.2.0.jar:/opt/voltdb/lib/jackson-core-2.9.4.jar:/opt/voltdb/lib/jackson-annotations-2.9.4.jar:/opt/voltdb/lib/kafka_2.10-0.10.2.1.jar:/opt/voltdb/lib/calcite-core-1.17.0.jar:/opt/voltdb/lib/protobuf-java-3.4.0.jar:/opt/voltdb/lib/jetty-http-9.4.15.v20190215.jar:/opt/voltdb/lib/felix-framework-5.6.12.jar:/opt/voltdb/lib/jackson-databind-2.9.4.jar:/opt/voltdb/lib/jetty-security-9.4.15.v20190215.jar:/opt/voltdb/lib/scala-parser-combinators_2.11-1.0.2.jar:/opt/voltdb/lib/snmp4j-2.5.2.jar:/opt/voltdb/lib/jna.jar:/opt/voltdb/lib/httpasyncclient-4.0.2.jar:/opt/voltdb/lib/owner-java8-1.0.10.jar:/opt/voltdb/lib/avro-1.9.0.jar:/opt/voltdb/lib/scala-library-2.11.5.jar:/opt/voltdb/lib/commons-lang3-3.8.1.jar:/opt/voltdb/lib/slf4j-log4j12-1.6.2.jar:/opt/voltdb/lib/commons-compiler-2.7.6.jar:/opt/voltdb/lib/netty-all-4.1.32.Final.jar:/opt/voltdb/lib/snappy-java-1.1.1.7.jar:/opt/voltdb/lib/commons-codec-1.6.jar:/opt/voltdb/lib/kafka-clients-0.10.2.1.jar:/opt/voltdb/lib/calcite-server-1.17.0-sources.jar:/opt/voltdb/lib/jetty-servlet-9.4.15.v20190215.jar:/opt/voltdb/lib/owner-1.0.10.jar:/opt/voltdb/lib/jaxb-api-2.3.0.jar:/opt/voltdb/lib/vmetrics.jar:/opt/voltdb/lib/istack-commons-runtime-3.0.8.jar:/opt/voltdb/lib/calcite-server-1.17.0.jar:/opt/voltdb/lib/extension/voltdb-rabbitmq.jar
+2020-12-06 08:49:35,407   INFO  [main] CONSOLE: When using the INIT command, some deployment file settings (hostcount and voltdbroot path) are ignored
+2020-12-06 08:49:35,409   INFO  [main] HOST: When using the INIT command, some deployment file settings (hostcount and voltdbroot path) are ignored
+2020-12-06 08:49:35,530   INFO  [main] HOST: Initialized VoltDB root directory /var/voltdb/voltdbroot
+2020-12-06 08:49:35,531   INFO  [main] CONSOLE: Initialized VoltDB root directory /var/voltdb/voltdbroot
+2020-12-06 08:49:39,742   INFO  [main] HOST: PID of this Volt process is 1
+2020-12-06 08:49:39,774   INFO  [main] CONSOLE: Initializing VoltDB...
+
+ _    __      ____  ____  ____ 
+| |  / /___  / / /_/ __ \/ __ )
+| | / / __ \/ / __/ / / / __  |
+| |/ / /_/ / / /_/ /_/ / /_/ / 
+|___/\____/_/\__/_____/_____/
+
+--------------------------------
+
+2020-12-06 08:49:39,776   INFO  [main] HOST: Searching for license file located /opt/voltdb/license.xml
+2020-12-06 08:49:39,778   INFO  [main] CONSOLE: Build: 9.2.1 voltdb-9.2.1-0-g7cc7658-local Community Edition
+2020-12-06 08:49:39,781   INFO  [main] HOST: Command line arguments: org.voltdb.VoltDB probe placementgroup 0 voltdbroot /var/voltdb/ mesh node1 hostcount 1
+2020-12-06 08:49:39,784   INFO  [main] HOST: Command line JVM arguments: -Xmx2048m -Djava.awt.headless=true -Djavax.security.auth.useSubjectCredsOnly=false -Dsun.net.inetaddr.ttl=300 -Dsun.net.inetaddr.negative.ttl=3600 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseTLAB -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCondCardMark -Dsun.rmi.dgc.server.gcInterval=9223372036854775807 -Dsun.rmi.dgc.client.gcInterval=9223372036854775807 -XX:CMSWaitDuration=120000 -XX:CMSMaxAbortablePrecleanTime=120000 -XX:+ExplicitGCInvokesConcurrent -XX:+CMSScavengeBeforeRemark -XX:+CMSClassUnloadingEnabled -XX:+PerfDisableSharedMem -Dlog4j.configuration=file:///opt/voltdb/voltdb/log4j.xml -Djava.library.path=default
+2020-12-06 08:49:39,785   INFO  [main] HOST: Command line JVM classpath: /opt/voltdb/voltdb/voltdb-9.2.1.jar:/opt/voltdb/lib/netty-tcnative-boringssl-static-2.0.20.Final.jar:/opt/voltdb/lib/jetty-server-9.4.15.v20190215.jar:/opt/voltdb/lib/httpcore-4.3.3.jar:/opt/voltdb/lib/slf4j-api-1.6.2.jar:/opt/voltdb/lib/tomcat-juli.jar:/opt/voltdb/lib/httpcore-nio-4.3.2.jar:/opt/voltdb/lib/calcite-core-1.17.0-sources.jar:/opt/voltdb/lib/calcite-linq4j-1.17.0.jar:/opt/voltdb/lib/servlet-api-3.1.jar:/opt/voltdb/lib/jetty-util-9.4.15.v20190215.jar:/opt/voltdb/lib/metrics-core-2.2.0.jar:/opt/voltdb/lib/httpclient-4.3.6.jar:/opt/voltdb/lib/guava-26.0-jre.jar:/opt/voltdb/lib/cron-java8-1.5.jar:/opt/voltdb/lib/jetty-io-9.4.15.v20190215.jar:/opt/voltdb/lib/avatica-core-1.12.0-sources.jar:/opt/voltdb/lib/calcite-linq4j-1.17.0-sources.jar:/opt/voltdb/lib/super-csv-2.1.0.jar:/opt/voltdb/lib/tomcat-jdbc.jar:/opt/voltdb/lib/scala-xml_2.11-1.0.2.jar:/opt/voltdb/lib/jetty-continuation-9.4.15.v20190215.jar:/opt/voltdb/lib/avatica-core-1.12.0.jar:/opt/voltdb/lib/janino-2.7.6.jar:/opt/voltdb/lib/jaxb-core-2.3.0.1.jar:/opt/voltdb/lib/javax.annotation-api-1.3.2.jar:/opt/voltdb/lib/commons-logging-1.1.3.jar:/opt/voltdb/lib/jaxb-runtime-2.3.0.1.jar:/opt/voltdb/lib/jline-2.10.jar:/opt/voltdb/lib/jsch-0.1.51.jar:/opt/voltdb/lib/lz4-1.2.0.jar:/opt/voltdb/lib/log4j-1.2.16.jar:/opt/voltdb/lib/javax.activation-api-1.2.0.jar:/opt/voltdb/lib/jackson-core-2.9.4.jar:/opt/voltdb/lib/jackson-annotations-2.9.4.jar:/opt/voltdb/lib/kafka_2.10-0.10.2.1.jar:/opt/voltdb/lib/calcite-core-1.17.0.jar:/opt/voltdb/lib/protobuf-java-3.4.0.jar:/opt/voltdb/lib/jetty-http-9.4.15.v20190215.jar:/opt/voltdb/lib/felix-framework-5.6.12.jar:/opt/voltdb/lib/jackson-databind-2.9.4.jar:/opt/voltdb/lib/jetty-security-9.4.15.v20190215.jar:/opt/voltdb/lib/scala-parser-combinators_2.11-1.0.2.jar:/opt/voltdb/lib/snmp4j-2.5.2.jar:/opt/voltdb/lib/jna.jar:/opt/voltdb/lib/httpasyncclient-4.0.2.jar:/opt/voltdb/lib/owner-java8-1.0.10.jar:/opt/voltdb/lib/avro-1.9.0.jar:/opt/voltdb/lib/scala-library-2.11.5.jar:/opt/voltdb/lib/commons-lang3-3.8.1.jar:/opt/voltdb/lib/slf4j-log4j12-1.6.2.jar:/opt/voltdb/lib/commons-compiler-2.7.6.jar:/opt/voltdb/lib/netty-all-4.1.32.Final.jar:/opt/voltdb/lib/snappy-java-1.1.1.7.jar:/opt/voltdb/lib/commons-codec-1.6.jar:/opt/voltdb/lib/kafka-clients-0.10.2.1.jar:/opt/voltdb/lib/calcite-server-1.17.0-sources.jar:/opt/voltdb/lib/jetty-servlet-9.4.15.v20190215.jar:/opt/voltdb/lib/owner-1.0.10.jar:/opt/voltdb/lib/jaxb-api-2.3.0.jar:/opt/voltdb/lib/vmetrics.jar:/opt/voltdb/lib/istack-commons-runtime-3.0.8.jar:/opt/voltdb/lib/calcite-server-1.17.0.jar:/opt/voltdb/lib/extension/voltdb-rabbitmq.jar
+2020-12-06 08:49:40,062   INFO  [main] CONSOLE: Loaded node-specific settings from /var/voltdb/voltdbroot/config/path.properties
+2020-12-06 08:49:40,063   INFO  [main] HOST: Loaded node-specific settings from /var/voltdb/voltdbroot/config/path.properties
+2020-12-06 08:49:40,566   INFO  [main] NETWORK: Default network thread count: 2
+2020-12-06 08:49:40,611   INFO  [main] HOST: Beginning inter-node communication on port 3021.
+2020-12-06 08:49:40,617   INFO  [main] HOST: Attempting to bind to leader ip node1/172.24.0.2:3021
+2020-12-06 08:49:40,625   INFO  [main] CONSOLE: Connecting to VoltDB cluster as the leader...
+2020-12-06 08:49:40,862   INFO  [main] ZK-SERVER: binding to port /127.0.0.1:7181
+2020-12-06 08:49:41,007   INFO  [main] ZK-SERVER: Created server with tickTime 3000 minSessionTimeout 6000 maxSessionTimeout 60000
+2020-12-06 08:49:41,219   INFO  [main] ZK-SERVER: Initiating client connection, connectString=127.0.0.1:7181 sessionTimeout=2000 watcher=org.voltcore.zk.ZKUtil$1@7bd7d6d6
+2020-12-06 08:49:41,245   INFO  [main-SendThread()] ZK-CLIENT: Opening socket connection to server /127.0.0.1:7181
+2020-12-06 08:49:41,257   INFO  [NIOServerCxn.Factory:/127.0.0.1:7181] ZK-SERVER: Accepted socket connection from /127.0.0.1:53462
+2020-12-06 08:49:41,271   INFO  [main-SendThread(localhost:7181)] ZK-CLIENT: Socket connection established to localhost/127.0.0.1:7181, initiating session
+2020-12-06 08:49:41,286   INFO  [NIOServerCxn.Factory:/127.0.0.1:7181] ZK-SERVER: Client attempting to establish new session at /127.0.0.1:53462
+2020-12-06 08:49:41,330   INFO  [main-SendThread(localhost:7181)] ZK-CLIENT: Session establishment complete on server localhost/127.0.0.1:7181, sessionid = 0x2f824c22d4000000, negotiated timeout = 6000
+2020-12-06 08:49:41,337   INFO  [ZooKeeperServer] ZK-SERVER: Established session 0x2f824c22d4000000 with negotiated timeout 6000 for client /127.0.0.1:53462
+2020-12-06 08:49:41,465   INFO  [Socket Joiner] HOST: Attempting to bind to internal ip 0.0.0.0/0.0.0.0:3021
+2020-12-06 08:49:41,539   INFO  [main] HOST: Host id of this node is: 0
+2020-12-06 08:49:41,543   INFO  [main] CONSOLE: Host id of this node is: 0
+2020-12-06 08:49:41,566   INFO  [main] HOST: Starting a new database cluster
+2020-12-06 08:49:41,568   INFO  [main] CONSOLE: Starting a new database cluster
+2020-12-06 08:49:41,628   INFO  [main] HOST: URL of deployment: /var/voltdb/voltdbroot/config/deployment.xml
+2020-12-06 08:49:41,642   INFO  [main] HOST: Dead host timeout set to 90000 milliseconds
+2020-12-06 08:49:41,643   INFO  [main] HOST: Elastic duration set to 50 milliseconds
+2020-12-06 08:49:41,644   INFO  [main] HOST: Elastic throughput set to 2 mb/s
+2020-12-06 08:49:41,645   INFO  [main] HOST: Max temptable size set to 200 mb
+2020-12-06 08:49:41,646   INFO  [main] HOST: Snapshot priority set to 6 [0 - 10]
+2020-12-06 08:49:41,647   INFO  [main] HOST: Query timeout set to 10000 milliseconds
+2020-12-06 08:49:41,648   WARN  [main] CONSOLE: User authentication is not enabled. The database is accessible and could be modified or shut down by anyone on the network.
+2020-12-06 08:49:41,654   INFO  [main] HOST: Loading VoltDB native library catalog-9.2.1 from the system library location. A confirmation message will follow if the loading is successful.
+2020-12-06 08:49:41,655   INFO  [main] HOST: Retry loading from file.
+2020-12-06 08:49:41,667   INFO  [main] HOST: Loading VoltDB native library catalog-9.2.1 from file /tmp/voltdb-a485f5b8-a684-4825-b3ff-4f536fa2179c-libcatalog-9.2.1.so. A confirmation message will follow if the loading is successful.
+2020-12-06 08:49:41,670   INFO  [main] HOST: Successfully loaded VoltDB native library catalog-9.2.1.
+2020-12-06 08:49:42,843   INFO  [main] HOST: Partitions on this host:0,1,2,3,4,5
+2020-12-06 08:49:42,947   INFO  [Leader elector-/db/leaders/globalservice] HOST: Host 0 promoted to be the global service provider
+2020-12-06 08:49:43,245   INFO  [main] org.eclipse.jetty.util.log: Logging initialized @6980ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-12-06 08:49:43,995   INFO  [main] HOST: Framework properties are: {org.osgi.framework.system.packages.extra=com.google_voltpatches.common.base;version=1.0.0,com.google_voltpatches.common.collect;version=1.0.0,com.google_voltpatches.common.io;version=1.0.0,com.google_voltpatches.common.net;version=1.0.0,com.google_voltpatches.common.util.concurrent;version=1.0.0,com.yammer.metrics;version=1.0.0,com.yammer.metrics.core;version=1.0.0,com.yammer.metrics.reporting;version=1.0.0,com.yammer.metrics.stats;version=1.0.0,com.yammer.metrics.util;version=1.0.0,jsr166y;version=1.0.0,org.apache.log4j;version=1.0.0,org.slf4j;version=1.0.0,org.voltcore.network;version=1.0.0,org.voltcore.logging;version=1.0.0,org.voltcore.utils;version=1.0.0,org.voltdb;include:="VoltType",version=1.0.0,org.voltdb.client;version=1.0.0,org.voltdb.common;exclude="Permission",version=1.0.0,org.voltdb.importer;version=1.0.0,org.voltdb.importer.formatter;version=1.0.0,org.voltdb.types;version=1.0.0, org.osgi.framework.storage.clean=onFirstInit, felix.cache.rootdir=/var/voltdb/voltdbroot/.bundles-cache, felix.cache.locking=false}
+2020-12-06 08:49:44,497   INFO  [main] IMPORT: Final importer count:0
+2020-12-06 08:49:44,498   INFO  [main] IMPORT: Currently loaded importer modules: [], types: []
+2020-12-06 08:49:44,504   INFO  [main] EXPORT: Export starting in BASIC mode
+2020-12-06 08:49:44,504   INFO  [main] EXPORT: Running org.voltdb.export.ExportManager
+2020-12-06 08:49:44,506   INFO  [main] EXPORT: Export has compression enabled in /var/voltdb/voltdbroot/export_overflow
+2020-12-06 08:49:44,506   INFO  [main] EXPORT: System is not using any export functionality or connectors configured are disabled.
+2020-12-06 08:49:44,507   INFO  [main] EXPORT: Cleaning out contents of export overflow directory /var/voltdb/voltdbroot/export_overflow for create with force
+2020-12-06 08:49:44,551   INFO  [main] CONSOLE: Initializing the database. This may take a moment...
+2020-12-06 08:49:45,016   INFO  [SP 0 Site - 0:0] HOST: Loading VoltDB native library voltdb-9.2.1 from file /tmp/voltdb-63d246bf-0710-45d8-b396-1af5a6c6f239-libvoltdb-9.2.1.so. A confirmation message will follow if the loading is successful.
+2020-12-06 08:49:45,055   INFO  [SP 0 Site - 0:0] HOST: Successfully loaded VoltDB native library voltdb-9.2.1.
+2020-12-06 08:49:45,467   INFO  [main] TM: Setting maximum size of MPI read pool to: 3
+2020-12-06 08:49:45,580   INFO  [LeaderAppointer-Babysitters] TM: [LeaderAppointer]Appointing HSId 0:0 as leader for partition 0 Previous Leader: none
+2020-12-06 08:49:45,614   INFO  [LeaderCache-SpInitiator-iv2appointees-0] REPAIR: SP 0:0 for partition 0 found (including self) 1 surviving replicas to repair.  Survivors: 0:0
+2020-12-06 08:49:45,621   INFO  [LeaderAppointer-Babysitters] TM: [LeaderAppointer]Appointing HSId 0:1 as leader for partition 1 Previous Leader: none
+2020-12-06 08:49:45,640   INFO  [LeaderAppointer-Babysitters] TM: [LeaderAppointer]Appointing HSId 0:2 as leader for partition 2 Previous Leader: none
+2020-12-06 08:49:45,650   INFO  [LeaderCache-SpInitiator-iv2appointees-1] REPAIR: SP 0:1 for partition 1 found (including self) 1 surviving replicas to repair.  Survivors: 0:1
+2020-12-06 08:49:45,660   INFO  [LeaderAppointer-Babysitters] TM: [LeaderAppointer]Appointing HSId 0:3 as leader for partition 3 Previous Leader: none
+2020-12-06 08:49:45,661   INFO  [LeaderCache-SpInitiator-iv2appointees-2] REPAIR: SP 0:2 for partition 2 found (including self) 1 surviving replicas to repair.  Survivors: 0:2
+2020-12-06 08:49:45,670   INFO  [LeaderCache-SpInitiator-iv2appointees-2] TM: SP 0:2 for partition 2 finished leader promotion. Took 11 ms.
+2020-12-06 08:49:45,670   INFO  [LeaderCache-SpInitiator-iv2appointees-1] TM: SP 0:1 for partition 1 finished leader promotion. Took 28 ms.
+2020-12-06 08:49:45,671   INFO  [LeaderCache-SpInitiator-iv2appointees-0] TM: SP 0:0 for partition 0 finished leader promotion. Took 63 ms.
+2020-12-06 08:49:45,698   INFO  [LeaderCache-Cartographer-iv2Masters-0] HOST: [Cartographer] Sending leader change notification with new leader:0:0 for partition:0
+2020-12-06 08:49:45,711   INFO  [LeaderCache-Cartographer-iv2Masters-0] HOST: [Cartographer] Sending leader change notification with new leader:0:1 for partition:1
+2020-12-06 08:49:45,717   INFO  [LeaderCache-Cartographer-iv2Masters-0] HOST: [Cartographer] Sending leader change notification with new leader:0:2 for partition:2
+2020-12-06 08:49:45,719   INFO  [LeaderCache-SpInitiator-iv2appointees-3] REPAIR: SP 0:3 for partition 3 found (including self) 1 surviving replicas to repair.  Survivors: 0:3
+2020-12-06 08:49:45,721   INFO  [LeaderCache-SpInitiator-iv2appointees-3] TM: SP 0:3 for partition 3 finished leader promotion. Took 31 ms.
+2020-12-06 08:49:45,723   INFO  [LeaderAppointer-Babysitters] TM: [LeaderAppointer]Appointing HSId 0:4 as leader for partition 4 Previous Leader: none
+2020-12-06 08:49:45,785   INFO  [LeaderCache-Cartographer-iv2Masters-0] HOST: [Cartographer] Sending leader change notification with new leader:0:3 for partition:3
+2020-12-06 08:49:45,790   INFO  [LeaderAppointer-Babysitters] TM: [LeaderAppointer]Appointing HSId 0:5 as leader for partition 5 Previous Leader: none
+2020-12-06 08:49:45,794   INFO  [LeaderCache-SpInitiator-iv2appointees-4] REPAIR: SP 0:4 for partition 4 found (including self) 1 surviving replicas to repair.  Survivors: 0:4
+2020-12-06 08:49:45,795   INFO  [LeaderCache-SpInitiator-iv2appointees-4] TM: SP 0:4 for partition 4 finished leader promotion. Took 3 ms.
+2020-12-06 08:49:45,839   INFO  [LeaderCache-Cartographer-iv2Masters-0] HOST: [Cartographer] Sending leader change notification with new leader:0:4 for partition:4
+2020-12-06 08:49:45,844   INFO  [LeaderCache-SpInitiator-iv2appointees-5] REPAIR: SP 0:5 for partition 5 found (including self) 1 surviving replicas to repair.  Survivors: 0:5
+2020-12-06 08:49:45,846   INFO  [LeaderCache-SpInitiator-iv2appointees-5] TM: SP 0:5 for partition 5 finished leader promotion. Took 24 ms.
+2020-12-06 08:49:45,870   INFO  [LeaderCache-Cartographer-iv2Masters-0] HOST: [Cartographer] Sending leader change notification with new leader:0:5 for partition:5
+2020-12-06 08:49:45,910   INFO  [LeaderCache-LeaderAppointer-iv2Masters-host0] TM: MP 0:6 for partition 16383 finished leader promotion. Took 22 ms. Leader ID: 0
+2020-12-06 08:49:45,930   INFO  [LeaderCache-Cartographer-iv2Mpi-0] HOST: [Cartographer MP] Sending leader change notification with new leader:
+2020-12-06 08:49:45,941   INFO  [LeaderCache-Cartographer-iv2Mpi-0] HOST: [Cartographer] Sending leader change notification with new leader:0:6 for partition:16383
+2020-12-06 08:49:46,071   INFO  [main] HOST: LICENSE INFORMATION: Community Edition license issued by VoltDB to VoltDB Community Edition User on Sun Dec 6, 2020
+2020-12-06 08:49:46,072   INFO  [main] HOST: LICENSE KEY: null
+2020-12-06 08:49:46,072   INFO  [main] HOST: LICENSE EXPIRES: Thu Dec 6, 2040
+2020-12-06 08:49:46,073   INFO  [main] HOST: LICENSE CONSTRAINTS: 2147483647 nodes
+2020-12-06 08:49:46,075   INFO  [main] HOST: LICENSE FEATURES: commandLoggingEnabled=false, activeActiveDREnabled=false, isDatabaseReplicationAllowed=false
+2020-12-06 08:49:46,076   INFO  [main] HOST: Database start action is Create.
+2020-12-06 08:49:46,076   INFO  [main] HOST: Listening for native wire protocol clients on port 21212.
+2020-12-06 08:49:46,083   INFO  [main] HOST: Listening for admin wire protocol clients on port 21211.
+2020-12-06 08:49:46,084   INFO  [main] HOST: Local machine HTTP monitoring is listening on port 8080.
+2020-12-06 08:49:46,085   INFO  [main] HOST: Json API over HTTP enabled at path /api/1.0/, listening on port 8080.
+2020-12-06 08:49:46,086   INFO  [main] HOST: Maximum usable Java heap set to 2031 mb.
+2020-12-06 08:49:46,086   INFO  [main] HOST: Minimum required Java heap for catalog and server config is 384 MB.
+2020-12-06 08:49:46,105   INFO  [main] HOST: Cluster has 1 hosts with leader hostname: "localhost". 6 local sites count. K = 0.
+2020-12-06 08:49:46,106   INFO  [main] HOST: The entire cluster has 1 copy of each of the 6 logical partitions.
+2020-12-06 08:49:46,108   INFO  [main] HOST: Detection of network partitions in the cluster is enabled.
+2020-12-06 08:49:46,110   INFO  [main] HOST: Client authentication is not enabled. Anonymous clients accepted.
+2020-12-06 08:49:46,111   INFO  [main] HOST: Automatic snapshots enabled, saved to /var/voltdb/voltdbroot/snapshots and named with prefix 'AUTOSNAP'.
+2020-12-06 08:49:46,112   INFO  [main] HOST: Database will retain a history of 2 snapshots, generated every 1 minutes.
+2020-12-06 08:49:46,113   INFO  [main] HOST: Using "/var/voltdb/voltdbroot" for voltdbroot directory.
+2020-12-06 08:49:46,114   INFO  [main] HOST: CPU INFO:         2 Cores, 2 Sockets, 2 Hardware Threads
+2020-12-06 08:49:46,115   INFO  [main] HOST: CPU DESC:         Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz 4096 KB cache
+2020-12-06 08:49:46,115   INFO  [main] HOST: HOST MEMORY (MB): 1991
+2020-12-06 08:49:46,116   INFO  [main] HOST: OS PROFILE:       Linux 4.19.76-linuxkit amd64 en_US
+2020-12-06 08:49:46,117   INFO  [main] HOST: DB VERSION:       9.2.1
+2020-12-06 08:49:46,118   INFO  [main] HOST: JAVA VERSION:     1.8.0_222
+2020-12-06 08:49:46,120   INFO  [main] HOST: JAVA RUNTIME:     OpenJDK Runtime Environment (1.8.0_222-8u222-b10-1~14.04-b10)
+2020-12-06 08:49:46,121   INFO  [main] HOST: JAVA VM:          OpenJDK 64-Bit Server VM (25.222-b10, mixed mode)
+2020-12-06 08:49:46,122   INFO  [main] HOST: About to list cluster interfaces for all nodes with format [ip1 ip2 ... ipN] client-port,admin-port,http-port
+2020-12-06 08:49:46,134   INFO  [main] HOST:   Host id: 0 with interfaces: 172.24.0.2 21212,21211,8080 [SELF]
+2020-12-06 08:49:46,135   WARN  [main] CONSOLE: This is not a highly available cluster. K-Safety is set to 0.
+2020-12-06 08:49:46,140   WARN  [main] CONSOLE: Durability is limited to periodic snapshots. Command logging is off.
+2020-12-06 08:49:46,162   INFO  [SnapshotDaemon] LOGGING: This node was selected as the leader for snapshot truncation
+2020-12-06 08:49:46,167   INFO  [SnapshotDaemon] LOGGING: Checking for existence of snapshot truncation request
+2020-12-06 08:49:46,178   INFO  [Thread-14] HOST: Logging config info
+2020-12-06 08:49:46,255   INFO  [SnapshotDaemon] SNAPSHOT: Initiating snapshot scan of /var/voltdb/voltdbroot/snapshots
+2020-12-06 08:49:46,260   INFO  [Thread-15] HOST: Resource limit monitoring configured to run every 60 seconds
+2020-12-06 08:49:46,262   INFO  [Thread-15] HOST: RSS limit: 80% (1.56 GB)
+2020-12-06 08:49:46,267   INFO  [Thread-15] EXPORT: System is not using any export functionality or connectors configured are disabled.
+2020-12-06 08:49:46,318   INFO  [Thread-15] org.eclipse.jetty.server.Server: jetty-9.4.15.v20190215; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_222-8u222-b10-1~14.04-b10
+2020-12-06 08:49:46,472   INFO  [Thread-15] org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=vmc
+2020-12-06 08:49:46,478   INFO  [Thread-15] org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2020-12-06 08:49:46,487   INFO  [Thread-15] org.eclipse.jetty.server.session: vmc Scavenging every 600000ms
+2020-12-06 08:49:46,569   INFO  [Thread-15] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@1d68bc82{/,null,AVAILABLE}
+2020-12-06 08:49:46,573   INFO  [Thread-15] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.h.ContextHandler@7ca0a18d{/css,null,AVAILABLE}
+2020-12-06 08:49:46,574   INFO  [Thread-15] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.h.ContextHandler@6f2fb402{/images,null,AVAILABLE}
+2020-12-06 08:49:46,575   INFO  [Thread-15] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.h.ContextHandler@1f524e69{/js,null,AVAILABLE}
+2020-12-06 08:49:46,610   INFO  [Thread-15] org.eclipse.jetty.server.AbstractConnector: Started VoltDB-HTTPD@4e662e3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-12-06 08:49:46,620   INFO  [Thread-15] org.eclipse.jetty.server.Server: Started @10355ms
+2020-12-06 08:49:46,622   INFO  [Thread-15] CONSOLE: Server Operational State is: NORMAL
+2020-12-06 08:49:46,626   INFO  [Thread-15] CONSOLE: Server completed initialization.
+2020-12-06 08:50:46,260   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.50.46
+2020-12-06 08:50:46,332   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.50.46 at 1607244646330
+2020-12-06 08:50:46,493   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 163 milliseconds
+2020-12-06 08:51:46,253   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.51.46
+2020-12-06 08:51:46,260   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.51.46 at 1607244706259
+2020-12-06 08:51:46,275   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 16 milliseconds
+2020-12-06 08:52:46,254   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.52.46
+2020-12-06 08:52:46,260   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.52.46 at 1607244766259
+2020-12-06 08:52:46,293   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 32 milliseconds
+2020-12-06 08:52:50,253   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.50.46
+2020-12-06 08:52:50,379   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.50.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.50.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.50.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.50.46-host_0.finished,
+2020-12-06 08:53:46,255   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.53.46
+2020-12-06 08:53:46,271   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.53.46 at 1607244826268
+2020-12-06 08:53:46,295   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 27 milliseconds
+2020-12-06 08:53:50,254   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.51.46
+2020-12-06 08:53:50,294   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.51.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.51.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.51.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.51.46-host_0.digest,
+2020-12-06 08:54:46,256   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.54.46
+2020-12-06 08:54:46,263   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.54.46 at 1607244886262
+2020-12-06 08:54:46,277   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 08:54:50,255   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.52.46
+2020-12-06 08:54:50,283   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.52.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.52.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.52.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.52.46-host_0.hash,
+2020-12-06 08:55:46,258   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.55.46
+2020-12-06 08:55:46,267   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.55.46 at 1607244946266
+2020-12-06 08:55:46,278   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 11 milliseconds
+2020-12-06 08:55:50,256   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.53.46
+2020-12-06 08:55:50,287   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.53.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.53.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.53.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.53.46-host_0.hash,
+2020-12-06 08:56:46,258   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.56.46
+2020-12-06 08:56:46,269   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.56.46 at 1607245006268
+2020-12-06 08:56:46,279   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 11 milliseconds
+2020-12-06 08:56:50,259   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.54.46
+2020-12-06 08:56:50,288   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.54.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.54.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.54.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.54.46-host_0.hash,
+2020-12-06 08:57:46,258   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.57.46
+2020-12-06 08:57:46,268   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.57.46 at 1607245066264
+2020-12-06 08:57:46,277   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 08:57:50,258   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.55.46
+2020-12-06 08:57:50,289   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.55.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.55.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.55.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.55.46-host_0.finished,
+2020-12-06 08:58:46,259   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.58.46
+2020-12-06 08:58:46,267   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.58.46 at 1607245126265
+2020-12-06 08:58:46,284   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 19 milliseconds
+2020-12-06 08:58:50,260   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.56.46
+2020-12-06 08:58:50,290   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.56.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.56.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.56.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.56.46.jar,
+2020-12-06 08:59:46,261   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.08.59.46
+2020-12-06 08:59:46,267   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.08.59.46 at 1607245186265
+2020-12-06 08:59:46,282   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 16 milliseconds
+2020-12-06 08:59:50,259   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.57.46
+2020-12-06 08:59:50,281   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.57.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.57.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.57.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.57.46-host_0.hash,
+2020-12-06 09:00:46,262   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.00.46
+2020-12-06 09:00:46,270   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.00.46 at 1607245246269
+2020-12-06 09:00:46,285   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 16 milliseconds
+2020-12-06 09:00:50,260   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.58.46
+2020-12-06 09:00:50,298   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.58.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.58.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.58.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.58.46-host_0.finished,
+2020-12-06 09:01:46,262   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.01.46
+2020-12-06 09:01:46,268   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.01.46 at 1607245306267
+2020-12-06 09:01:46,282   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 09:01:50,261   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.08.59.46
+2020-12-06 09:01:50,285   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.59.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.59.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.59.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.08.59.46-host_0.hash,
+2020-12-06 09:02:46,263   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.02.46
+2020-12-06 09:02:46,275   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.02.46 at 1607245366274
+2020-12-06 09:02:46,308   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 34 milliseconds
+2020-12-06 09:02:50,263   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.00.46
+2020-12-06 09:02:50,302   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.00.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.00.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.00.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.00.46-host_0.digest,
+2020-12-06 09:03:46,264   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.03.46
+2020-12-06 09:03:46,270   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.03.46 at 1607245426269
+2020-12-06 09:03:46,277   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 8 milliseconds
+2020-12-06 09:03:50,263   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.01.46
+2020-12-06 09:03:50,285   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.01.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.01.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.01.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.01.46-host_0.finished,
+2020-12-06 09:04:46,264   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.04.46
+2020-12-06 09:04:46,270   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.04.46 at 1607245486269
+2020-12-06 09:04:46,296   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 27 milliseconds
+2020-12-06 09:04:50,265   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.02.46
+2020-12-06 09:04:50,286   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.02.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.02.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.02.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.02.46-host_0.finished,
+2020-12-06 09:05:46,266   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.05.46
+2020-12-06 09:05:46,272   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.05.46 at 1607245546271
+2020-12-06 09:05:46,295   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 24 milliseconds
+2020-12-06 09:05:50,266   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.03.46
+2020-12-06 09:05:50,281   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.03.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.03.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.03.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.03.46.jar,
+2020-12-06 09:06:46,266   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.06.46
+2020-12-06 09:06:46,272   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.06.46 at 1607245606271
+2020-12-06 09:06:46,279   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 8 milliseconds
+2020-12-06 09:06:50,270   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.04.46
+2020-12-06 09:06:50,299   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.04.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.04.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.04.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.04.46-host_0.digest,
+2020-12-06 09:07:46,267   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.07.46
+2020-12-06 09:07:46,272   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.07.46 at 1607245666271
+2020-12-06 09:07:46,298   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 27 milliseconds
+2020-12-06 09:07:50,267   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.05.46
+2020-12-06 09:07:50,307   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.05.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.05.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.05.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.05.46-host_0.digest,
+2020-12-06 09:08:46,268   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.08.46
+2020-12-06 09:08:46,276   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.08.46 at 1607245726274
+2020-12-06 09:08:46,285   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 09:08:50,268   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.06.46
+2020-12-06 09:08:50,306   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.06.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.06.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.06.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.06.46-host_0.finished,
+2020-12-06 09:09:46,270   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.09.46
+2020-12-06 09:09:46,274   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.09.46 at 1607245786273
+2020-12-06 09:09:46,285   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 12 milliseconds
+2020-12-06 09:09:50,269   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.07.46
+2020-12-06 09:09:50,288   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.07.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.07.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.07.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.07.46.jar,
+2020-12-06 09:10:46,271   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.10.46
+2020-12-06 09:10:46,286   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.10.46 at 1607245846284
+2020-12-06 09:10:46,299   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 09:10:50,270   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.08.46
+2020-12-06 09:10:50,309   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.08.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.08.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.08.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.08.46.jar,
+2020-12-06 09:11:46,271   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.11.46
+2020-12-06 09:11:46,277   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.11.46 at 1607245906276
+2020-12-06 09:11:46,286   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 09:11:50,270   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.09.46
+2020-12-06 09:11:50,301   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.09.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.09.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.09.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.09.46.jar,
+2020-12-06 09:12:46,272   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.12.46
+2020-12-06 09:12:46,287   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.12.46 at 1607245966285
+2020-12-06 09:12:46,300   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 14 milliseconds
+2020-12-06 09:12:50,272   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.10.46
+2020-12-06 09:12:50,313   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.10.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.10.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.10.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.10.46-host_0.digest,
+2020-12-06 09:13:46,273   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.13.46
+2020-12-06 09:13:46,278   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.13.46 at 1607246026277
+2020-12-06 09:13:46,297   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 20 milliseconds
+2020-12-06 09:13:50,272   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.11.46
+2020-12-06 09:13:50,292   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.11.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.11.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.11.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.11.46-host_0.finished,
+2020-12-06 09:13:50,644   INFO  [NTPServiceThread-0] HOST: Create action blocker /db/action_blockers/uac_nt_blocker successfully.
+2020-12-06 09:13:50,651   INFO  [NTPServiceThread-0] COMPILER: Applying the following DDL to cluster:
+2020-12-06 09:13:50,654   INFO  [NTPServiceThread-0] COMPILER: 	create table COVID (id integer not nnull, country varchar(64))
+2020-12-06 09:13:50,684   ERROR [NTPServiceThread-0] COMPILER: [Ad Hoc DDL Input:1]: DDL Error: "unexpected token: NNULL required: NULL" in statement starting on lineno: 1
+2020-12-06 09:13:50,685   ERROR [NTPServiceThread-0] COMPILER: [Ad Hoc DDL Input:1]: DDL Error: "unexpected token: NNULL required: NULL"
+2020-12-06 09:13:50,686   INFO  [NTPServiceThread-0] HOST: Removing action blocker /db/action_blockers/uac_nt_blocker
+2020-12-06 09:13:50,692   INFO  [NTPServiceThread-0] HOST: Remove action blocker /db/action_blockers/uac_nt_blocker successfully.
+2020-12-06 09:14:03,265   INFO  [NTPServiceThread-1] HOST: Create action blocker /db/action_blockers/uac_nt_blocker successfully.
+2020-12-06 09:14:03,273   INFO  [NTPServiceThread-1] COMPILER: Applying the following DDL to cluster:
+2020-12-06 09:14:03,274   INFO  [NTPServiceThread-1] COMPILER: 	create table COVID (id integer not null, country varchar(64))
+2020-12-06 09:14:03,420   INFO  [NTPServiceThread-1] COMPILER: Catalog Difference Report
+=========================
+TABLE CHANGES:
+  Table COVID added.
+
+2020-12-06 09:14:03,428   INFO  [NTPServiceThread-1] HOST: Max timeout setting for VerifyCatalogAndWriteJar is 60 seconds
+2020-12-06 09:14:03,428   INFO  [NTPServiceThread-Priority-0] HOST: Verify user procedure classes and write catalog jar (compressed size = 828, uncompressed size = 1326)
+2020-12-06 09:14:03,633   INFO  [MP Site - 0:6] HOST: New catalog update from: Catalog: catalog hash 8C5FC68F59, deployment hash 956AA89780, version 0
+2020-12-06 09:14:03,639   INFO  [MP Site - 0:6] HOST: To: catalog hash: 8120165B08, deployment hash: 956AA89780
+2020-12-06 09:14:03,640   INFO  [SP 0 Site - 0:0] HOST: Site 0:0 acknowledged data and catalog prechecks.
+2020-12-06 09:14:03,659   INFO  [SP 0 Site - 0:0] EXPORT: No stream related changes in update catalog.
+2020-12-06 09:14:03,674   INFO  [SP 0 Site - 0:0] IMPORT: Final importer count:0
+2020-12-06 09:14:03,692   INFO  [SP 0 Site - 0:0] HOST: Resource limit monitoring configured to run every 60 seconds
+2020-12-06 09:14:03,693   INFO  [SP 0 Site - 0:0] HOST: RSS limit: 80% (1.56 GB)
+2020-12-06 09:14:03,723   INFO  [MP Site - 0:6] HOST: Catalog update block time (milliseconds): 88.818549
+2020-12-06 09:14:03,726   INFO  [MP Site - 0:6] HOST: Globally updating the current application catalog and deployment (new hashes 8120165B08, 956AA89780).
+2020-12-06 09:14:03,726   INFO  [Thread-117] HOST: Removing action blocker /db/action_blockers/uac_nt_blocker
+2020-12-06 09:14:03,732   INFO  [Thread-117] HOST: Remove action blocker /db/action_blockers/uac_nt_blocker successfully.
+2020-12-06 09:15:04,274   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.15.04
+2020-12-06 09:15:04,286   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.15.04 at 1607246104285
+2020-12-06 09:15:04,309   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 24 milliseconds
+2020-12-06 09:15:04,668   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.15.04 finished at 1607246104668 and took 0.369 seconds 
+2020-12-06 09:15:08,273   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.12.46
+2020-12-06 09:15:08,319   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.12.46.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.12.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.12.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.12.46-host_0.finished,
+2020-12-06 09:16:04,275   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.16.04
+2020-12-06 09:16:04,282   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.16.04 at 1607246164281
+2020-12-06 09:16:04,309   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 28 milliseconds
+2020-12-06 09:16:04,546   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.16.04 finished at 1607246164546 and took 0.239 seconds 
+2020-12-06 09:16:08,274   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.13.46
+2020-12-06 09:16:08,303   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.13.46-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.13.46-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.13.46-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.13.46.jar,
+2020-12-06 09:17:04,277   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.17.04
+2020-12-06 09:17:04,284   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.17.04 at 1607246224284
+2020-12-06 09:17:04,291   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 7 milliseconds
+2020-12-06 09:17:04,528   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.17.04 finished at 1607246224528 and took 0.239 seconds 
+2020-12-06 09:17:08,275   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.15.04
+2020-12-06 09:17:08,296   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.15.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.15.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.15.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.15.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.15.04-host_0.finished,
+2020-12-06 09:18:04,278   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.18.04
+2020-12-06 09:18:04,305   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.18.04 at 1607246284304
+2020-12-06 09:18:04,321   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 16 milliseconds
+2020-12-06 09:18:04,575   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.18.04 finished at 1607246284575 and took 0.257 seconds 
+2020-12-06 09:18:08,276   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.16.04
+2020-12-06 09:18:08,324   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.16.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.16.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.16.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.16.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.16.04-COVID.vpt,
+2020-12-06 09:19:04,279   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.19.04
+2020-12-06 09:19:04,289   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.19.04 at 1607246344286
+2020-12-06 09:19:04,316   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 30 milliseconds
+2020-12-06 09:19:04,548   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.19.04 finished at 1607246344547 and took 0.234 seconds 
+2020-12-06 09:19:08,277   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.17.04
+2020-12-06 09:19:08,305   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.17.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.17.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.17.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.17.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.17.04-COVID.vpt,
+2020-12-06 09:20:04,280   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.20.04
+2020-12-06 09:20:04,291   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.20.04 at 1607246404289
+2020-12-06 09:20:04,315   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 26 milliseconds
+2020-12-06 09:20:04,549   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.20.04 finished at 1607246404549 and took 0.236 seconds 
+2020-12-06 09:20:08,279   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.18.04
+2020-12-06 09:20:08,304   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.18.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.18.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.18.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.18.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.18.04-host_0.digest,
+2020-12-06 09:20:36,825   INFO  [SnapshotDaemon] LOGGING: Initiating user snapshot with nonce covid
+2020-12-06 09:20:36,875   INFO  [MP Site - 0:6] SNAPSHOT: Synchronously saving database to path: /var/voltdb/snapshots/, ID: covid at 1607246436873
+2020-12-06 09:20:37,131   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot covid finished at 1607246437131 and took 0.232 seconds 
+2020-12-06 09:20:37,158   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 285 milliseconds
+2020-12-06 09:21:04,279   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.21.04
+2020-12-06 09:21:04,287   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.21.04 at 1607246464286
+2020-12-06 09:21:04,298   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 12 milliseconds
+2020-12-06 09:21:04,532   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.21.04 finished at 1607246464532 and took 0.237 seconds 
+2020-12-06 09:21:08,278   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.19.04
+2020-12-06 09:21:08,308   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.19.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.19.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.19.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.19.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.19.04-host_0.digest,
+2020-12-06 09:22:04,280   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.22.04
+2020-12-06 09:22:04,291   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.22.04 at 1607246524290
+2020-12-06 09:22:04,299   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 9 milliseconds
+2020-12-06 09:22:04,533   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.22.04 finished at 1607246524533 and took 0.236 seconds 
+2020-12-06 09:22:08,280   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.20.04
+2020-12-06 09:22:08,305   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.20.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.20.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.20.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.20.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.20.04.jar,
+2020-12-06 09:23:04,282   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.23.04
+2020-12-06 09:23:04,289   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.23.04 at 1607246584289
+2020-12-06 09:23:04,302   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 09:23:04,554   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.23.04 finished at 1607246584554 and took 0.255 seconds 
+2020-12-06 09:23:08,280   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.21.04
+2020-12-06 09:23:08,308   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.21.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.21.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.21.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.21.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.21.04-COVID.vpt,
+2020-12-06 09:24:04,282   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.24.04
+2020-12-06 09:24:04,290   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.24.04 at 1607246644289
+2020-12-06 09:24:04,317   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 28 milliseconds
+2020-12-06 09:24:04,552   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.24.04 finished at 1607246644552 and took 0.238 seconds 
+2020-12-06 09:24:08,282   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.22.04
+2020-12-06 09:24:08,302   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.22.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.22.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.22.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.22.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.22.04-host_0.hash,
+2020-12-06 09:25:04,283   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.25.04
+2020-12-06 09:25:04,290   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.25.04 at 1607246704289
+2020-12-06 09:25:04,297   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 8 milliseconds
+2020-12-06 09:25:04,528   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.25.04 finished at 1607246704528 and took 0.233 seconds 
+2020-12-06 09:25:08,282   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.23.04
+2020-12-06 09:25:08,314   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.23.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.23.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.23.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.23.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.23.04-host_0.hash,
+2020-12-06 09:26:04,283   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.26.04
+2020-12-06 09:26:04,292   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.26.04 at 1607246764291
+2020-12-06 09:26:04,301   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 09:26:04,535   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.26.04 finished at 1607246764534 and took 0.235 seconds 
+2020-12-06 09:26:08,283   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.24.04
+2020-12-06 09:26:08,331   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.24.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.24.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.24.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.24.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.24.04-host_0.hash,
+2020-12-06 09:27:04,285   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.27.04
+2020-12-06 09:27:04,295   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.27.04 at 1607246824294
+2020-12-06 09:27:04,324   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 29 milliseconds
+2020-12-06 09:27:04,557   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.27.04 finished at 1607246824556 and took 0.234 seconds 
+2020-12-06 09:27:08,284   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.25.04
+2020-12-06 09:27:08,320   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.25.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.25.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.25.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.25.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.25.04-host_0.hash,
+2020-12-06 09:28:04,285   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.28.04
+2020-12-06 09:28:04,295   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.28.04 at 1607246884293
+2020-12-06 09:28:04,303   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 09:28:04,533   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.28.04 finished at 1607246884533 and took 0.234 seconds 
+2020-12-06 09:28:08,284   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.26.04
+2020-12-06 09:28:08,304   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.26.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.26.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.26.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.26.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.26.04-host_0.digest,
+2020-12-06 09:36:58,389   INFO  [Estimated Time Updater] HOST: 488737 estimated time update.
+2020-12-06 09:36:58,396   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.36.58
+2020-12-06 09:36:58,498   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.36.58 at 1607247418494
+2020-12-06 09:36:58,550   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 56 milliseconds
+2020-12-06 09:36:59,129   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.36.58 finished at 1607247419128 and took 0.594 seconds 
+2020-12-06 09:37:01,905   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.27.04
+2020-12-06 09:37:01,969   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.27.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.27.04-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.27.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.27.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.27.04-COVID.vpt,
+2020-12-06 09:37:05,905   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.37.05
+2020-12-06 09:37:05,913   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.37.05 at 1607247425912
+2020-12-06 09:37:05,941   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 29 milliseconds
+2020-12-06 09:37:06,174   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.37.05 finished at 1607247426173 and took 0.235 seconds 
+2020-12-06 09:37:09,909   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.28.04
+2020-12-06 09:37:10,803   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.28.04-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.28.04-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.28.04.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.28.04-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.28.04-host_0.finished,
+2020-12-06 09:37:59,112   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.37.59
+2020-12-06 09:37:59,120   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.37.59 at 1607247479118
+2020-12-06 09:37:59,144   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 26 milliseconds
+2020-12-06 09:37:59,377   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.37.59 finished at 1607247479377 and took 0.236 seconds 
+2020-12-06 09:38:03,111   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.36.58
+2020-12-06 09:38:03,148   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.36.58-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.36.58-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.36.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.36.58-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.36.58.jar,
+2020-12-06 09:39:00,339   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.39.00
+2020-12-06 09:39:00,353   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.39.00 at 1607247540351
+2020-12-06 09:39:00,380   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 29 milliseconds
+2020-12-06 09:39:00,641   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.39.00 finished at 1607247540641 and took 0.264 seconds 
+2020-12-06 09:39:04,337   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.37.05
+2020-12-06 09:39:04,361   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.05.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.05-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.05-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.05-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.05-host_0.digest,
+2020-12-06 09:40:00,269   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.40.00
+2020-12-06 09:40:00,283   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.40.00 at 1607247600281
+2020-12-06 09:40:00,298   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 17 milliseconds
+2020-12-06 09:40:00,531   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.40.00 finished at 1607247600531 and took 0.236 seconds 
+2020-12-06 09:40:04,269   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.37.59
+2020-12-06 09:40:04,296   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.37.59-host_0.finished,
+2020-12-06 09:41:00,201   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.41.00
+2020-12-06 09:41:00,210   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.41.00 at 1607247660207
+2020-12-06 09:41:00,217   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 09:41:00,451   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.41.00 finished at 1607247660451 and took 0.237 seconds 
+2020-12-06 09:41:04,205   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.39.00
+2020-12-06 09:41:04,312   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.39.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.39.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.39.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.39.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.39.00-host_0.digest,
+2020-12-06 09:42:00,133   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.42.00
+2020-12-06 09:42:00,153   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.42.00 at 1607247720150
+2020-12-06 09:42:00,164   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 14 milliseconds
+2020-12-06 09:42:00,653   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.42.00 finished at 1607247720653 and took 0.493 seconds 
+2020-12-06 09:42:04,132   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.40.00
+2020-12-06 09:42:04,220   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.40.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.40.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.40.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.40.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.40.00-COVID.vpt,
+2020-12-06 09:43:00,064   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.43.00
+2020-12-06 09:43:00,080   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.43.00 at 1607247780075
+2020-12-06 09:43:00,091   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 16 milliseconds
+2020-12-06 09:43:00,445   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.43.00 finished at 1607247780445 and took 0.357 seconds 
+2020-12-06 09:43:04,063   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.41.00
+2020-12-06 09:43:04,100   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.41.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.41.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.41.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.41.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.41.00.jar,
+2020-12-06 09:43:59,996   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.43.59
+2020-12-06 09:44:00,006   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.43.59 at 1607247840005
+2020-12-06 09:44:00,016   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 11 milliseconds
+2020-12-06 09:44:00,248   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.43.59 finished at 1607247840248 and took 0.234 seconds 
+2020-12-06 09:44:03,995   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.42.00
+2020-12-06 09:44:04,035   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.42.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.42.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.42.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.42.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.42.00-host_0.digest,
+2020-12-06 09:44:59,928   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.44.59
+2020-12-06 09:44:59,950   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.44.59 at 1607247899948
+2020-12-06 09:44:59,965   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 17 milliseconds
+2020-12-06 09:45:00,260   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.44.59 finished at 1607247900260 and took 0.3 seconds 
+2020-12-06 09:45:03,926   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.43.00
+2020-12-06 09:45:03,983   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.00-host_0.digest,
+2020-12-06 09:45:59,858   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.45.59
+2020-12-06 09:45:59,869   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.45.59 at 1607247959866
+2020-12-06 09:45:59,880   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 14 milliseconds
+2020-12-06 09:46:00,118   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.45.59 finished at 1607247960117 and took 0.243 seconds 
+2020-12-06 09:46:03,858   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.43.59
+2020-12-06 09:46:03,887   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.43.59-COVID.vpt,
+2020-12-06 09:46:59,798   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.46.59
+2020-12-06 09:46:59,813   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.46.59 at 1607248019810
+2020-12-06 09:46:59,841   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 30 milliseconds
+2020-12-06 09:47:00,174   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.46.59 finished at 1607248020174 and took 0.337 seconds 
+2020-12-06 09:47:03,789   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.44.59
+2020-12-06 09:47:03,824   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.44.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.44.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.44.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.44.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.44.59-COVID.vpt,
+2020-12-06 09:47:59,722   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.47.59
+2020-12-06 09:47:59,732   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.47.59 at 1607248079730
+2020-12-06 09:47:59,746   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 16 milliseconds
+2020-12-06 09:48:00,066   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.47.59 finished at 1607248080066 and took 0.323 seconds 
+2020-12-06 09:48:03,724   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.45.59
+2020-12-06 09:48:03,757   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.45.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.45.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.45.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.45.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.45.59.jar,
+2020-12-06 09:48:59,653   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.48.59
+2020-12-06 09:48:59,664   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.48.59 at 1607248139663
+2020-12-06 09:48:59,696   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 32 milliseconds
+2020-12-06 09:48:59,926   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.48.59 finished at 1607248139926 and took 0.235 seconds 
+2020-12-06 09:49:03,652   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.46.59
+2020-12-06 09:49:03,681   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.46.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.46.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.46.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.46.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.46.59-host_0.digest,
+2020-12-06 09:49:59,585   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.49.59
+2020-12-06 09:49:59,596   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.49.59 at 1607248199594
+2020-12-06 09:49:59,627   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 33 milliseconds
+2020-12-06 09:49:59,874   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.49.59 finished at 1607248199874 and took 0.25 seconds 
+2020-12-06 09:50:03,584   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.47.59
+2020-12-06 09:50:03,617   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.47.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.47.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.47.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.47.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.47.59-host_0.digest,
+2020-12-06 09:50:59,516   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.50.59
+2020-12-06 09:50:59,527   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.50.59 at 1607248259526
+2020-12-06 09:50:59,539   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 09:50:59,777   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.50.59 finished at 1607248259777 and took 0.241 seconds 
+2020-12-06 09:51:03,516   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.48.59
+2020-12-06 09:51:03,538   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.48.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.48.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.48.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.48.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.48.59-host_0.digest,
+2020-12-06 09:51:59,447   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.51.59
+2020-12-06 09:51:59,459   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.51.59 at 1607248319457
+2020-12-06 09:51:59,481   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 24 milliseconds
+2020-12-06 09:51:59,753   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.51.59 finished at 1607248319752 and took 0.274 seconds 
+2020-12-06 09:52:03,447   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.49.59
+2020-12-06 09:52:03,476   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.49.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.49.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.49.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.49.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.49.59.jar,
+2020-12-06 09:52:59,379   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.52.59
+2020-12-06 09:52:59,391   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.52.59 at 1607248379388
+2020-12-06 09:52:59,401   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 09:52:59,736   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.52.59 finished at 1607248379735 and took 0.338 seconds 
+2020-12-06 09:53:03,378   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.50.59
+2020-12-06 09:53:03,401   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.50.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.50.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.50.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.50.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.50.59-COVID.vpt,
+2020-12-06 09:53:59,311   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.53.59
+2020-12-06 09:53:59,321   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.53.59 at 1607248439320
+2020-12-06 09:53:59,333   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 09:53:59,610   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.53.59 finished at 1607248439609 and took 0.281 seconds 
+2020-12-06 09:54:03,310   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.51.59
+2020-12-06 09:54:03,331   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.51.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.51.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.51.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.51.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.51.59-COVID.vpt,
+2020-12-06 09:54:59,243   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.54.59
+2020-12-06 09:54:59,258   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.54.59 at 1607248499255
+2020-12-06 09:54:59,270   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 09:54:59,578   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.54.59 finished at 1607248499578 and took 0.311 seconds 
+2020-12-06 09:55:03,242   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.52.59
+2020-12-06 09:55:03,276   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.52.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.52.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.52.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.52.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.52.59-host_0.digest,
+2020-12-06 09:55:59,175   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.55.59
+2020-12-06 09:55:59,189   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.55.59 at 1607248559186
+2020-12-06 09:55:59,198   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 12 milliseconds
+2020-12-06 09:55:59,445   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.55.59 finished at 1607248559445 and took 0.25 seconds 
+2020-12-06 09:56:03,173   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.53.59
+2020-12-06 09:56:03,213   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.53.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.53.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.53.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.53.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.53.59-host_0.digest,
+2020-12-06 09:56:59,106   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.56.59
+2020-12-06 09:56:59,117   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.56.59 at 1607248619114
+2020-12-06 09:56:59,126   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 11 milliseconds
+2020-12-06 09:56:59,374   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.56.59 finished at 1607248619374 and took 0.25 seconds 
+2020-12-06 09:57:03,104   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.54.59
+2020-12-06 09:57:03,127   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.54.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.54.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.54.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.54.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.54.59-host_0.finished,
+2020-12-06 09:57:59,038   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.57.59
+2020-12-06 09:57:59,057   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.57.59 at 1607248679054
+2020-12-06 09:57:59,069   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 09:57:59,345   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.57.59 finished at 1607248679344 and took 0.277 seconds 
+2020-12-06 09:58:03,036   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.55.59
+2020-12-06 09:58:03,071   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.55.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.55.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.55.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.55.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.55.59.jar,
+2020-12-06 09:58:58,969   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.58.58
+2020-12-06 09:58:59,000   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.58.58 at 1607248738997
+2020-12-06 09:58:59,056   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 59 milliseconds
+2020-12-06 09:58:59,342   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.58.58 finished at 1607248739341 and took 0.307 seconds 
+2020-12-06 09:59:02,968   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.56.59
+2020-12-06 09:59:03,011   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.56.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.56.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.56.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.56.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.56.59-COVID.vpt,
+2020-12-06 09:59:58,906   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.09.59.58
+2020-12-06 09:59:58,932   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.09.59.58 at 1607248798928
+2020-12-06 09:59:58,955   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 27 milliseconds
+2020-12-06 09:59:59,313   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.09.59.58 finished at 1607248799313 and took 0.367 seconds 
+2020-12-06 10:00:02,899   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.57.59
+2020-12-06 10:00:02,927   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.57.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.57.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.57.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.57.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.57.59-COVID.vpt,
+2020-12-06 10:00:58,832   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.00.58
+2020-12-06 10:00:58,858   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.00.58 at 1607248858856
+2020-12-06 10:00:58,886   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 30 milliseconds
+2020-12-06 10:00:59,160   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.00.58 finished at 1607248859159 and took 0.275 seconds 
+2020-12-06 10:01:02,830   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.58.58
+2020-12-06 10:01:02,910   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.58.58-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.58.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.58.58-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.58.58.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.58.58-host_0.hash,
+2020-12-06 10:01:58,763   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.01.58
+2020-12-06 10:01:58,783   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.01.58 at 1607248918781
+2020-12-06 10:01:58,793   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 12 milliseconds
+2020-12-06 10:01:59,025   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.01.58 finished at 1607248919025 and took 0.236 seconds 
+2020-12-06 10:02:02,763   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.09.59.58
+2020-12-06 10:02:02,802   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.59.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.59.58-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.59.58-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.59.58-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.09.59.58.jar,
+2020-12-06 10:02:58,695   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.02.58
+2020-12-06 10:02:58,712   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.02.58 at 1607248978711
+2020-12-06 10:02:58,723   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 12 milliseconds
+2020-12-06 10:02:59,115   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.02.58 finished at 1607248979115 and took 0.395 seconds 
+2020-12-06 10:03:02,694   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.00.58
+2020-12-06 10:03:02,719   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.00.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.00.58-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.00.58-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.00.58-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.00.58.jar,
+2020-12-06 10:03:58,627   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.03.58
+2020-12-06 10:03:58,641   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.03.58 at 1607249038639
+2020-12-06 10:03:58,667   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 28 milliseconds
+2020-12-06 10:03:58,941   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.03.58 finished at 1607249038941 and took 0.277 seconds 
+2020-12-06 10:04:02,625   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.01.58
+2020-12-06 10:04:02,659   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.01.58-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.01.58.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.01.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.01.58-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.01.58-host_0.digest,
+2020-12-06 10:05:00,559   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.05.00
+2020-12-06 10:05:00,571   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.05.00 at 1607249100569
+2020-12-06 10:05:00,581   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 11 milliseconds
+2020-12-06 10:05:00,859   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.05.00 finished at 1607249100859 and took 0.283 seconds 
+2020-12-06 10:05:04,557   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.02.58
+2020-12-06 10:05:04,583   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.02.58-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.02.58-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.02.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.02.58-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.02.58.jar,
+2020-12-06 10:06:00,489   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.06.00
+2020-12-06 10:06:00,513   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.06.00 at 1607249160511
+2020-12-06 10:06:00,525   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 14 milliseconds
+2020-12-06 10:06:00,830   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.06.00 finished at 1607249160830 and took 0.308 seconds 
+2020-12-06 10:06:04,488   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.03.58
+2020-12-06 10:06:04,518   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.03.58-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.03.58.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.03.58-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.03.58-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.03.58-host_0.finished,
+2020-12-06 10:07:00,420   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.07.00
+2020-12-06 10:07:00,433   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.07.00 at 1607249220431
+2020-12-06 10:07:00,442   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 11 milliseconds
+2020-12-06 10:07:00,695   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.07.00 finished at 1607249220694 and took 0.256 seconds 
+2020-12-06 10:07:04,421   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.05.00
+2020-12-06 10:07:04,447   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.05.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.05.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.05.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.05.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.05.00-host_0.finished,
+2020-12-06 10:08:00,352   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.08.00
+2020-12-06 10:08:00,369   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.08.00 at 1607249280367
+2020-12-06 10:08:00,382   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 10:08:00,695   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.08.00 finished at 1607249280694 and took 0.315 seconds 
+2020-12-06 10:08:04,351   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.06.00
+2020-12-06 10:08:04,396   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.06.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.06.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.06.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.06.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.06.00.jar,
+2020-12-06 10:09:00,285   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.09.00
+2020-12-06 10:09:00,297   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.09.00 at 1607249340295
+2020-12-06 10:09:00,308   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 10:09:00,608   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.09.00 finished at 1607249340608 and took 0.303 seconds 
+2020-12-06 10:09:04,283   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.07.00
+2020-12-06 10:09:04,331   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.07.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.07.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.07.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.07.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.07.00-host_0.hash,
+2020-12-06 10:10:00,216   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.10.00
+2020-12-06 10:10:00,228   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.10.00 at 1607249400227
+2020-12-06 10:10:00,237   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 9 milliseconds
+2020-12-06 10:10:00,568   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.10.00 finished at 1607249400568 and took 0.335 seconds 
+2020-12-06 10:10:04,215   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.08.00
+2020-12-06 10:10:04,249   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.08.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.08.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.08.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.08.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.08.00-host_0.hash,
+2020-12-06 10:11:00,149   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.11.00
+2020-12-06 10:11:00,169   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.11.00 at 1607249460168
+2020-12-06 10:11:00,202   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 34 milliseconds
+2020-12-06 10:11:00,437   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.11.00 finished at 1607249460436 and took 0.237 seconds 
+2020-12-06 10:11:04,148   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.09.00
+2020-12-06 10:11:04,191   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.09.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.09.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.09.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.09.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.09.00-host_0.hash,
+2020-12-06 10:12:00,080   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.12.00
+2020-12-06 10:12:00,099   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.12.00 at 1607249520097
+2020-12-06 10:12:00,110   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 13 milliseconds
+2020-12-06 10:12:00,345   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.12.00 finished at 1607249520345 and took 0.237 seconds 
+2020-12-06 10:12:04,079   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.10.00
+2020-12-06 10:12:04,117   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.10.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.10.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.10.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.10.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.10.00-host_0.finished,
+2020-12-06 10:13:00,011   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.13.00
+2020-12-06 10:13:00,023   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.13.00 at 1607249580022
+2020-12-06 10:13:00,053   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 31 milliseconds
+2020-12-06 10:13:00,304   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.13.00 finished at 1607249580304 and took 0.254 seconds 
+2020-12-06 10:13:04,010   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.11.00
+2020-12-06 10:13:04,044   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.11.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.11.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.11.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.11.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.11.00-host_0.hash,
+2020-12-06 10:13:59,943   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.13.59
+2020-12-06 10:13:59,954   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.13.59 at 1607249639952
+2020-12-06 10:13:59,974   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 22 milliseconds
+2020-12-06 10:14:00,208   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.13.59 finished at 1607249640208 and took 0.237 seconds 
+2020-12-06 10:14:03,942   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.12.00
+2020-12-06 10:14:03,980   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.12.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.12.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.12.00-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.12.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.12.00-host_0.hash,
+2020-12-06 10:14:59,875   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.14.59
+2020-12-06 10:14:59,886   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.14.59 at 1607249699885
+2020-12-06 10:14:59,908   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 23 milliseconds
+2020-12-06 10:15:00,142   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.14.59 finished at 1607249700142 and took 0.236 seconds 
+2020-12-06 10:15:03,873   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.13.00
+2020-12-06 10:15:03,904   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.00.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.00-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.00-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.00-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.00-host_0.digest,
+2020-12-06 10:15:59,806   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.15.59
+2020-12-06 10:15:59,818   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.15.59 at 1607249759816
+2020-12-06 10:15:59,832   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 15 milliseconds
+2020-12-06 10:16:00,090   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.15.59 finished at 1607249760090 and took 0.263 seconds 
+2020-12-06 10:16:03,805   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.13.59
+2020-12-06 10:16:03,838   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.13.59-host_0.digest,
+2020-12-06 10:16:59,737   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.16.59
+2020-12-06 10:16:59,759   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.16.59 at 1607249819758
+2020-12-06 10:16:59,771   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 12 milliseconds
+2020-12-06 10:17:00,029   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.16.59 finished at 1607249820029 and took 0.261 seconds 
+2020-12-06 10:17:03,736   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.14.59
+2020-12-06 10:17:03,779   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.14.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.14.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.14.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.14.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.14.59.jar,
+2020-12-06 10:17:59,670   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.17.59
+2020-12-06 10:17:59,683   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.17.59 at 1607249879681
+2020-12-06 10:17:59,695   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 14 milliseconds
+2020-12-06 10:17:59,933   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.17.59 finished at 1607249879933 and took 0.24 seconds 
+2020-12-06 10:18:03,667   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.15.59
+2020-12-06 10:18:03,699   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.15.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.15.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.15.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.15.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.15.59-host_0.finished,
+2020-12-06 10:18:59,601   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.18.59
+2020-12-06 10:18:59,616   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.18.59 at 1607249939614
+2020-12-06 10:18:59,635   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 21 milliseconds
+2020-12-06 10:18:59,868   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.18.59 finished at 1607249939868 and took 0.235 seconds 
+2020-12-06 10:19:03,600   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.16.59
+2020-12-06 10:19:03,644   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.16.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.16.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.16.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.16.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.16.59-host_0.finished,
+2020-12-06 10:19:59,532   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.19.59
+2020-12-06 10:19:59,544   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.19.59 at 1607249999543
+2020-12-06 10:19:59,575   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 31 milliseconds
+2020-12-06 10:19:59,909   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.19.59 finished at 1607249999908 and took 0.337 seconds 
+2020-12-06 10:20:03,530   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.17.59
+2020-12-06 10:20:03,566   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.17.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.17.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.17.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.17.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.17.59-COVID.vpt,
+2020-12-06 10:20:59,464   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.20.59
+2020-12-06 10:20:59,476   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.20.59 at 1607250059475
+2020-12-06 10:20:59,504   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 29 milliseconds
+2020-12-06 10:20:59,819   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.20.59 finished at 1607250059819 and took 0.318 seconds 
+2020-12-06 10:21:03,462   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.18.59
+2020-12-06 10:21:03,485   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.18.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.18.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.18.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.18.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.18.59-host_0.finished,
+2020-12-06 10:21:59,395   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.21.59
+2020-12-06 10:21:59,407   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.21.59 at 1607250119406
+2020-12-06 10:21:59,416   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 10:21:59,654   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.21.59 finished at 1607250119653 and took 0.239 seconds 
+2020-12-06 10:22:03,395   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.19.59
+2020-12-06 10:22:03,426   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.19.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.19.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.19.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.19.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.19.59-host_0.digest,
+2020-12-06 10:22:59,326   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.22.59
+2020-12-06 10:22:59,339   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.22.59 at 1607250179338
+2020-12-06 10:22:59,360   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 22 milliseconds
+2020-12-06 10:22:59,595   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.22.59 finished at 1607250179594 and took 0.236 seconds 
+2020-12-06 10:23:03,325   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.20.59
+2020-12-06 10:23:03,362   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.20.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.20.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.20.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.20.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.20.59-COVID.vpt,
+2020-12-06 10:23:59,258   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.23.59
+2020-12-06 10:23:59,269   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.23.59 at 1607250239267
+2020-12-06 10:23:59,286   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 19 milliseconds
+2020-12-06 10:23:59,545   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.23.59 finished at 1607250239545 and took 0.261 seconds 
+2020-12-06 10:24:03,257   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.21.59
+2020-12-06 10:24:03,278   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.21.59-host_0.digest,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.21.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.21.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.21.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.21.59-host_0.hash,
+2020-12-06 10:24:59,189   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.24.59
+2020-12-06 10:24:59,202   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.24.59 at 1607250299201
+2020-12-06 10:24:59,211   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 10 milliseconds
+2020-12-06 10:24:59,452   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.24.59 finished at 1607250299452 and took 0.244 seconds 
+2020-12-06 10:25:03,188   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.22.59
+2020-12-06 10:25:03,211   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.22.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.22.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.22.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.22.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.22.59-host_0.digest,
+2020-12-06 10:25:59,121   INFO  [SnapshotDaemon] SNAPSHOT: Requesting auto snapshot to path /var/voltdb/voltdbroot/snapshots nonce AUTOSNAP_2020.12.06.10.25.59
+2020-12-06 10:25:59,137   INFO  [MP Site - 0:6] SNAPSHOT: Asynchronously saving database to path: /var/voltdb/voltdbroot/snapshots, ID: AUTOSNAP_2020.12.06.10.25.59 at 1607250359135
+2020-12-06 10:25:59,149   INFO  [MP Site - 0:6] SNAPSHOT: Snapshot initiation took 14 milliseconds
+2020-12-06 10:25:59,429   INFO  [Replicated SnapshotDataTarget terminator ] SNAPSHOT: Snapshot AUTOSNAP_2020.12.06.10.25.59 finished at 1607250359428 and took 0.282 seconds 
+2020-12-06 10:26:03,120   INFO  [SnapshotDaemon] SNAPSHOT: Snapshot daemon deleting AUTOSNAP_2020.12.06.10.23.59
+2020-12-06 10:26:03,144   INFO  [Async snapshot deletion thread] SNAPSHOT: Deleting files: /var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.23.59-COVID.vpt,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.23.59.jar,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.23.59-host_0.hash,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.23.59-host_0.finished,/var/voltdb/voltdbroot/snapshots/AUTOSNAP_2020.12.06.10.23.59-host_0.digest,
