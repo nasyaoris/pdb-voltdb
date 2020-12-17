@@ -7,7 +7,7 @@
     <httpd enabled="true">
         <jsonapi enabled="true"/>
     </httpd>
-    <snapshot frequency="1m" enabled="true"/>
+    <snapshot frequency="15s" enabled="true"/>
     <commandlog enabled="false">
         <frequency/>
     </commandlog>

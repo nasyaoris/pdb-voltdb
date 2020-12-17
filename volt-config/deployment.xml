@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <deployment>
-	<cluster sitesperhost="6"/>
-	<httpd enabled="true">
-		<jsonapi enabled="true"/>
-	</httpd>
-	<snapshot enabled="true" frequency="1m"/>
-	<systemsettings>
-		<temptables maxsize="200"/>
-		<snapshot/>
-		<elastic/>
-		<query/>
-		<resourcemonitor>
-			<memorylimit/>
-		</resourcemonitor>
-	</systemsettings>
-	<security enabled="false"/>
+        <cluster sitesperhost="6"/>
+        <httpd enabled="true">
+                <jsonapi enabled="true"/>
+        </httpd>
+        <snapshot enabled="true" frequency="15s"/>
+        <systemsettings>
+                <temptables maxsize="200"/>
+                <snapshot/>
+                <elastic/>
+                <query/>
+                <resourcemonitor>
+                        <memorylimit/>
+                </resourcemonitor>
+        </systemsettings>
+        <security enabled="false"/>
 </deployment>
