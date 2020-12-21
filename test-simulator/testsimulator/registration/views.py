@@ -12,8 +12,8 @@ import json
 
 
 def loginPage(request):
-    if (request.session['usernamme'] != ''):
-        return HttpResponseRedirect('/registration/success')
+    # if (request.session['username'] != ''):
+    #     return HttpResponseRedirect('/registration/success')
     return render(request, "login.html")
 
 
@@ -23,7 +23,7 @@ def login(request):
     user = authenticate(request, username=username, password=password)
     if user is not None:
         auth_login(request, user)
-        request.session['usernamme'] = username
+        request.session['username'] = username
         # Redirect to a success page.
         return HttpResponseRedirect('/registration/success')
     else:
