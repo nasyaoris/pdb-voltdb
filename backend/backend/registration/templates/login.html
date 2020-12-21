@@ -1,0 +1,66 @@
+
+{% extends 'layout.html' %} {% load static %}
+
+{% block body %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet"></link>
+<!-- <script>
+  if(localStorage.getItem("username")){
+    window.location.href="/"
+  }
+  function handleLogin(e){
+
+
+    const {username,password} = e.elements;
+    const formData = new FormData()
+    formData.append('username', username.value);
+    formData.append('password', password.value);
+    $.ajax({url: "/registration/login-user", type:"POST",    processData: false,
+    contentType: false,  data:formData,success: function(result){
+      if(result.message=="success"){
+        localStorage.setItem("username", result.username);
+        window.location.href="/"
+      }
+      else{
+        $("#error").html(result.message);
+
+      }
+   
+    }});
+
+    
+  }
+</script> -->
+<div class="container">
+  <div class="card">
+    <h1>Login</h1>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+    
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+      <div  style="margin-bottom:1rem;">
+      <small id="error"></small>
+    </div>
+      <!-- {% if messages %}
+     
+      <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+      {% endif %} -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <div>
+        <small>Dont have an account?<a href="/registration/signup">Sign up here</a></small>
+      </div>
+    </form>
+  </div>
+  
+</div>
+{% endblock %}
