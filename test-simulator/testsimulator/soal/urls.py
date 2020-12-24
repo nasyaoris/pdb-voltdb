@@ -17,5 +17,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^(?P<id>)', views.soalPage, name='soal_page'),
+    url(r'^(?P<soal_id>\d+)/$', views.soalPage, name='soal_page'),
+    url(r'^submit_jawaban/', views.submit_jawaban, name='submit_jawaban'),
 ]

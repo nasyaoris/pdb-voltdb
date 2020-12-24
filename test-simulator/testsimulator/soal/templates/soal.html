@@ -1,10 +1,24 @@
 {% extends 'layout.html' %} {% load static %}
 
 {% block body %}
+<link href="{% static 'css\index.css' %}" rel="stylesheet"></link>
+
+<div class = "card">
 <div>
-  <h1>
-    Soal
-  </h1>
+  <h3>
+    {{soal.soal}}
+  </h3>
+  <form method = "post" action="{% url 'submit_jawaban'%}">
+  <input type="hidden" value={{soal.id}} id = "soal" name="soal"></input>
+  {% csrf_token %}
+  {% for jawaban in pilihan_jawaban %}
+  <input type="radio" value={{jawaban.id}} id = "jawaban" name="jawaban"></input>
+  <label for ="jawaban">{{jawaban.pilihan}}</label><br>
+  {% endfor %}
+</div>
+
+<button type = "submit" class="btn btn-primary">Submit</button>
+</form>
 </div>
 
 {% endblock %}
