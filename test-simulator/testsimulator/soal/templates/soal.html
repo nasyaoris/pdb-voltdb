@@ -12,8 +12,10 @@
   <input type="hidden" value={{soal.id}} id="soal" name="soal"></input>
   {% csrf_token %}
   {% for jawaban in pilihan_jawaban %}
+  <label for ="jawaban"></label>
   <input type="radio" value={{jawaban.id}} id="jawaban" name="jawaban"></input>
-  <label for ="jawaban">{{jawaban.pilihan}}</label><br>
+  {{jawaban.pilihan}}
+  </label><br>
   {% endfor %}
 </div>
 

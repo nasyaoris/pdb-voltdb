@@ -37,10 +37,30 @@ def submit_jawaban(request):
     answer.save()
     totalSoal = len(SoalModel.objects.all())
     nextSoal = int(soal) + 1
-    return HttpResponseRedirect('/soal/%d/' % nextSoal)
-    # if nextSoal <= totalSoal:
-    #     return HttpResponseRedirect('/soal/%d/' % nextSoal)
-    # else:
-    #     return hasil nilai
+    if nextSoal <= totalSoal:
+        return HttpResponseRedirect('/soal/%d/' % nextSoal)
+    else:
+        return HttpResponseRedirect('/soal/hasil')
 
+def hasil(request):
+    user = UserProfile.objects.get(nama=request.user.username)
+    jawaban = JawabanModel.objects.filter(id_user=user)
+    totalSoal = len(SoalModel.objects.all())
+    print(totalSoal)
+    score = 0
+    print(len(jawaban))
+    for ans in jawaban:
+        print("in for loop")
+        if ans.id_pilihan.id == ans.id_soal.kunci:
+            print("in if")
+            score += 1
+
+    print(score)
+    score = (score/totalSoal) * 100 
+
+    context = {
+        'score' : score
+    }
+
+    return render(request, "hasil.html", context)
 
