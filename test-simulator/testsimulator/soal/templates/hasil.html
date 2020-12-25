@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} {% load static %}
+
+{% block body %}
+<link href="{% static 'css\index.css' %}" rel="stylesheet"></link>
+
+<div class = "card">
+<div>
+  <h3>
+    Nilai kamu adalah
+  </h3>
+  <p>{{score}}</p>
+</div>
+</div>
+
+{% endblock %}

@@ -19,4 +19,5 @@ from . import views
 urlpatterns = [
     url(r'^(?P<soal_id>\d+)/$', views.soalPage, name='soal_page'),
     url(r'^submit_jawaban/', views.submit_jawaban, name='submit_jawaban'),
+    url(r'^hasil/', views.hasil, name='hasil'),
 ]
