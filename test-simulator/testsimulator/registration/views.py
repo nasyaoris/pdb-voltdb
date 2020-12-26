@@ -1,14 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-from datetime import datetime
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from django.contrib import messages
-from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
-import json
 
 
 def loginPage(request):
