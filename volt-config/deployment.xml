@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <deployment>
-        <cluster sitesperhost="6"/>
+        <cluster kfactor="2" sitesperhost="9"/>
         <httpd enabled="true">
                 <jsonapi enabled="true"/>
         </httpd>
-        <snapshot enabled="true" frequency="15s"/>
+        <snapshot enabled="true" frequency="1m"/>
         <systemsettings>
                 <temptables maxsize="200"/>
                 <snapshot/>
-                <elastic/>
                 <query/>
                 <resourcemonitor>
                         <memorylimit/>
