@@ -1,17 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
-from datetime import datetime
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from .models import SoalModel
 from jawaban.models import JawabanModel
 from registration.models import UserProfile
 from pilihanJawaban.models import PilihanJawabanModel
-from django.contrib.auth.models import User
-import json
+from random import choice
 
 
 def soalPage(request,soal_id):
@@ -35,9 +32,15 @@ def submit_jawaban(request):
     user = UserProfile.objects.get(nama=request.user.username)
     answer = JawabanModel(id_soal=SoalModel(soal), id_pilihan=PilihanJawabanModel(jawaban), id_user=user)
     answer.save()
-    totalSoal = len(SoalModel.objects.all())
-    nextSoal = int(soal) + 1
-    if nextSoal <= totalSoal:
+    allSoal = SoalModel.objects.all()
+    totalSoal = len(allSoal)
+    allJawaban = JawabanModel.objects.filter(id_user=user)
+    totalJawaban = len(allJawaban)
+    answeredIdSoal = []
+    for i in allJawaban:
+        answeredIdSoal.append(i.id_soal.id)
+    if totalJawaban < totalSoal:
+        nextSoal = choice([i for i in range(1, totalSoal+1) if i not in answeredIdSoal])
         return HttpResponseRedirect('/soal/%d/' % nextSoal)
     else:
         return HttpResponseRedirect('/soal/hasil')
@@ -46,16 +49,11 @@ def hasil(request):
     user = UserProfile.objects.get(nama=request.user.username)
     jawaban = JawabanModel.objects.filter(id_user=user)
     totalSoal = len(SoalModel.objects.all())
-    print(totalSoal)
     score = 0
-    print(len(jawaban))
     for ans in jawaban:
-        print("in for loop")
         if ans.id_pilihan.id == ans.id_soal.kunci:
-            print("in if")
             score += 1
 
-    print(score)
     score = (score/totalSoal) * 100 
 
     context = {
