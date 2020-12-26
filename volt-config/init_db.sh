@@ -13,6 +13,7 @@ if [ -f "$activeCtnPrefixFile" ]; then
 
   echo 'Registering Procedures ...'
   docker exec -it -w /tmp/config ${activeCtnPrefix}1 bash -c 'sqlcmd < ./sql/register_procedures.sql';
+  docker exec -it -w /tmp/config ${activeCtnPrefix}1 bash -c 'sqlcmd < ./sql/populate.sql';
 else
   echo 'No Active Cluster Record Found, please run init_cluster.sh first'
 fi
