@@ -3,12 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
-from django.views.decorators.csrf import csrf_exempt
 from .models import SoalModel
 from jawaban.models import JawabanModel
 from registration.models import UserProfile
 from pilihanJawaban.models import PilihanJawabanModel
-from random import choice
+import random
 
 
 def soalPage(request,soal_id):
@@ -19,6 +18,10 @@ def soalPage(request,soal_id):
     for jawaban in semua_jawaban:
         if jawaban.soal.id == soal.id:
             pilihan_jawaban.append(jawaban)
+
+    if len(pilihan_jawaban) > 0:
+        random.shuffle(pilihan_jawaban)
+
     context = {
         'pilihan_jawaban' : pilihan_jawaban,
         'soal' : soal,
@@ -40,7 +43,7 @@ def submit_jawaban(request):
     for i in allJawaban:
         answeredIdSoal.append(i.id_soal.id)
     if totalJawaban < totalSoal:
-        nextSoal = choice([i for i in range(1, totalSoal+1) if i not in answeredIdSoal])
+        nextSoal = random.choice([i for i in range(1, totalSoal+1) if i not in answeredIdSoal])
         return HttpResponseRedirect('/soal/%d/' % nextSoal)
     else:
         return HttpResponseRedirect('/soal/hasil')
