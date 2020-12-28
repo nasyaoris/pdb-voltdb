@@ -1,8 +1,0 @@
-{
-    "log4jDst": [{
-        "format": "'.'yyyy-MM-dd",
-        "path": "/var/voltdb/voltdbroot/log/volt.log"
-    }],
-    "pid": 1,
-    "workingDir": "/opt/voltdb"
-}

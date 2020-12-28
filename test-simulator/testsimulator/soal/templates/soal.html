@@ -9,11 +9,13 @@
     {{soal.soal}}
   </h3>
   <form method = "post" action="{% url 'submit_jawaban'%}">
-  <input type="hidden" value={{soal.id}} id = "soal" name="soal"></input>
+  <input type="hidden" value={{soal.id}} id="soal" name="soal"></input>
   {% csrf_token %}
   {% for jawaban in pilihan_jawaban %}
-  <input type="radio" value={{jawaban.id}} id = "jawaban" name="jawaban"></input>
-  <label for ="jawaban">{{jawaban.pilihan}}</label><br>
+  <label for ="jawaban"></label>
+  <input type="radio" value={{jawaban.id}} id="jawaban" name="jawaban"></input>
+  {{jawaban.pilihan}}
+  </label><br>
   {% endfor %}
 </div>
 

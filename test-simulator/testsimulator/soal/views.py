@@ -1,15 +1,13 @@
 from django.shortcuts import render
 
 # Create your views here.
-from datetime import datetime
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from django.contrib import messages
-from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponseRedirect
 from .models import SoalModel
 from jawaban.models import JawabanModel
+from registration.models import UserProfile
 from pilihanJawaban.models import PilihanJawabanModel
-import json
+import random
 
 
 def soalPage(request,soal_id):
@@ -20,6 +18,10 @@ def soalPage(request,soal_id):
     for jawaban in semua_jawaban:
         if jawaban.soal.id == soal.id:
             pilihan_jawaban.append(jawaban)
+
+    if len(pilihan_jawaban) > 0:
+        random.shuffle(pilihan_jawaban)
+
     context = {
         'pilihan_jawaban' : pilihan_jawaban,
         'soal' : soal,
@@ -30,10 +32,36 @@ def soalPage(request,soal_id):
 def submit_jawaban(request):
     jawaban = request.POST.get('jawaban')
     soal = request.POST.get('soal')
-    user = request.user
-    print(jawaban)
-    print(user)
-    print(soal)
-    return HttpResponseRedirect('soal/submit_jawaban')
+    user = UserProfile.objects.get(nama=request.user.username)
+    answer = JawabanModel(id_soal=SoalModel(soal), id_pilihan=PilihanJawabanModel(jawaban), id_user=user)
+    answer.save()
+    allSoal = SoalModel.objects.all()
+    totalSoal = len(allSoal)
+    allJawaban = JawabanModel.objects.filter(id_user=user)
+    totalJawaban = len(allJawaban)
+    answeredIdSoal = []
+    for i in allJawaban:
+        answeredIdSoal.append(i.id_soal.id)
+    if totalJawaban < totalSoal:
+        nextSoal = random.choice([i for i in range(1, totalSoal+1) if i not in answeredIdSoal])
+        return HttpResponseRedirect('/soal/%d/' % nextSoal)
+    else:
+        return HttpResponseRedirect('/soal/hasil')
 
+def hasil(request):
+    user = UserProfile.objects.get(nama=request.user.username)
+    jawaban = JawabanModel.objects.filter(id_user=user)
+    totalSoal = len(SoalModel.objects.all())
+    score = 0
+    for ans in jawaban:
+        if ans.id_pilihan.id == ans.id_soal.kunci:
+            score += 1
+
+    score = (score/totalSoal) * 100 
+
+    context = {
+        'score' : score
+    }
+
+    return render(request, "hasil.html", context)
 
