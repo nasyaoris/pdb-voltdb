@@ -31,11 +31,9 @@ def submit_jawaban(request):
     jawaban = request.POST.get('jawaban')
     soal = request.POST.get('soal')
     user = request.user
-    print(soal)
-    print(user)
     print(jawaban)
-    #submit = JawabanModel(id_user = user, id_jawaban = jawaban)
-    #string = "user id = " + user + "id jawaban = " + jawaban
-    return HttpResponseRedirect('/soal/submit_jawaban/')
+    print(user)
+    print(soal)
+    return HttpResponseRedirect('soal/submit_jawaban')
 
 
