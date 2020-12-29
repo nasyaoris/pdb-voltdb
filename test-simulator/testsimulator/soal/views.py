@@ -24,7 +24,6 @@ def soalPage(request,soal_id):
     semua_jawaban = list(semua_jawaban)'''
     procGetPilihan = VoltProcedure(client, "SelectPilihanBySoal", [FastSerializer.VOLTTYPE_STRING])
     pilihan_jawaban = procGetPilihan.call(soal.id)
-
     if len(pilihan_jawaban) > 0:
         random.shuffle(pilihan_jawaban)
 
