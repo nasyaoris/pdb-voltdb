@@ -6,17 +6,27 @@
 <div class = "card">
 <div>
   <h3>
-    {{soal.soal}}
+    {{soal}}
   </h3>
   <form method = "post" action="{% url 'submit_jawaban'%}">
-  <input type="hidden" value={{soal.id}} id="soal" name="soal"></input>
+  <input type="hidden" value={{soal_id}} id="soal" name="soal"></input>
   {% csrf_token %}
-  {% for jawaban in pilihan_jawaban %}
   <label for ="jawaban"></label>
-  <input type="radio" value={{jawaban.id}} id="jawaban" name="jawaban"></input>
-  {{jawaban.pilihan}}
+  <input type="radio" value={{pilihan_jawaban_id_1}} id="jawaban" name="jawaban"></input>
+  {{pilihan_jawaban_nama_1}}
   </label><br>
-  {% endfor %}
+  <label for ="jawaban"></label>
+  <input type="radio" value={{pilihan_jawaban_id_2}} id="jawaban" name="jawaban"></input>
+  {{pilihan_jawaban_nama_2}}
+  </label><br>
+  <label for ="jawaban"></label>
+  <input type="radio" value={{pilihan_jawaban_id_3}} id="jawaban" name="jawaban"></input>
+  {{pilihan_jawaban_nama_3}}
+  </label><br>
+  <label for ="jawaban"></label>
+  <input type="radio" value={{pilihan_jawaban_id_4}} id="jawaban" name="jawaban"></input>
+  {{pilihan_jawaban_nama_4}}
+  </label><br>
 </div>
 
 <button type = "submit" class="btn btn-primary">Submit</button>
