@@ -3,7 +3,7 @@
 
 {% block body %}
 <link href="{% static 'css/index.css' %}" rel="stylesheet"></link>
-<!-- <script>
+<script>
   if(localStorage.getItem("username")){
     window.location.href="/"
   }
@@ -14,7 +14,7 @@
     const formData = new FormData()
     formData.append('username', username.value);
     formData.append('password', password.value);
-    $.ajax({url: "/registration/login-user", type:"POST",    processData: false,
+    $.ajax({url: "/registration/login", type:"POST",    processData: false,
     contentType: false,  data:formData,success: function(result){
       if(result.message=="success"){
         localStorage.setItem("username", result.username);
@@ -29,11 +29,11 @@
 
     
   }
-</script> -->
+</script>
 <div class="container">
   <div class="card">
     <h1>Login</h1>
-    <form method="post" action="{% url 'login' %}">
+    <form onsubmit="event.preventDefault(); handleLogin(this);">
       {% csrf_token %}
       <div class="form-group">
         <label for="username">Username</label>

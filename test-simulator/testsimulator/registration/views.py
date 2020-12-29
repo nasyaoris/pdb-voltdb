@@ -15,14 +15,23 @@ def loginPage(request):
 
 
 def login(request):
+    if (request.method === "POST")
+    client = FastSerializer('localhost', 33281)
 
-    client = FastSerializer('localhost', 33200)
+    username = request.POST.get('username')
+    password = request.POST.get('password')
 
     proc = VoltProcedure(client, "Login", [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_STRING])
-    user = proc.call(["user1", "pass1"])
-    print(user.tables)
-    # username = request.POST.get('username')
-    # password = request.POST.get('password')
+    user = proc.call([username, password])
+
+    table = user.tables[0]
+
+    if (table === None):
+        return HttpResponseRedirect('/registration/login')
+    else:
+        request.session['username'] = table.tuples[0][0]
+        return HttpResponseRedirect('/soal/1')
+
     # user = authenticate(request, username=username, password=password)
     # if user is not None:
     #     auth_login(request, user)
