@@ -32,7 +32,7 @@ def soalPage(request,soal_id):
 
 def submit_jawaban(request):
 
-    client = FastSerializer("localhost", 49154)
+    client = FastSerializer("localhost", 49154) ## Sesuaikan port dengan container di docker
 
     jawaban = request.POST.get('jawaban')
     # print(jawaban)
