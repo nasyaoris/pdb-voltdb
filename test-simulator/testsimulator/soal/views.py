@@ -76,6 +76,10 @@ def hasil(request):
 
     username = request.user.username
 
+    procFinishTest = VoltProcedure( client, "FinishTest", [FastSerializer.VOLTTYPE_STRING])
+
+    finish = procFinishTest.call(username)
+
     procGetScore = VoltProcedure( client, "GetFinalScore", [FastSerializer.VOLTTYPE_STRING])
 
     score = procGetScore.call(username)
