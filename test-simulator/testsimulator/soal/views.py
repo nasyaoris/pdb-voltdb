@@ -11,22 +11,25 @@ import random
 from voltdbclient import *
 
 
-def soalPage(request,soal_id):
-    soal = get_object_or_404(SoalModel, id=soal_id)
-    pilihan_jawaban = []
+def soalPage(request,urutan):
+    client = FastSerializer("localhost", 49154)
+    #soal = get_object_or_404(SoalModel, id=soal_id)
+    username = request.user.username
+    procGetSoal = VoltProcedure(client, "SelectSoalByUrutan", [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_INTEGER])
+    soal = procGetSoal.call(username, urutan)
+    #Get soal dari volttable
+    '''pilihan_jawaban = []
     semua_jawaban = PilihanJawabanModel.objects.all()
-    semua_jawaban = list(semua_jawaban)
-    for jawaban in semua_jawaban:
-        if jawaban.soal.id == soal.id:
-            pilihan_jawaban.append(jawaban)
-
+    semua_jawaban = list(semua_jawaban)'''
+    procGetPilihan = VoltProcedure(client, "SelectPilihanBySoal", [FastSerializer.VOLTTYPE_STRING])
+    pilihan_jawaban = procGetPilihan.call(soal.id)
     if len(pilihan_jawaban) > 0:
         random.shuffle(pilihan_jawaban)
 
     context = {
         'pilihan_jawaban' : pilihan_jawaban,
         'soal' : soal,
-        'soal_id' : soal_id
+        'soal_id' : soal.id
         }
     return render(request, "soal.html", context)
 
