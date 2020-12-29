@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
+from voltdbclient import *
 
 
 def loginPage(request):
@@ -14,17 +15,23 @@ def loginPage(request):
 
 
 def login(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        auth_login(request, user)
-        request.session['username'] = username
-        # Redirect to a success page.
-        return HttpResponseRedirect('/registration/success')
-    else:
-        # Return an 'invalid login' error message.
-        return HttpResponseRedirect('/registration/login')
+
+    client = FastSerializer('localhost', 33200)
+
+    proc = VoltProcedure(client, "Login", [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_STRING])
+    user = proc.call(["user1", "pass1"])
+    print(user.tables)
+    # username = request.POST.get('username')
+    # password = request.POST.get('password')
+    # user = authenticate(request, username=username, password=password)
+    # if user is not None:
+    #     auth_login(request, user)
+    #     request.session['username'] = username
+    #     # Redirect to a success page.
+    #     return HttpResponseRedirect('/registration/success')
+    # else:
+    #     # Return an 'invalid login' error message.
+    #     return HttpResponseRedirect('/registration/login')
 
 
 def successPage(request):
