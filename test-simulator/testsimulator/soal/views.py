@@ -16,9 +16,8 @@ def soalPage(request, urutan):
 
     username = request.session['username']
 
-    # username = "user1" ## GANTI USERNAME NYA JADI DARI SESSION
-
-    procGetSoal = VoltProcedure(client, "SelectSoalByUrutan", [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_INTEGER])
+    procGetSoal = VoltProcedure(client, "SelectSoalByUrutan", 
+        [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_INTEGER])
     soal = procGetSoal.call([username, int(urutan)])
 
     tableSoal = soal.tables[0]
@@ -50,8 +49,7 @@ def soalPage(request, urutan):
 def submit_jawaban(request):
 
     req = request.META.get('HTTP_REFERER')
-    urutan = int(req[-3:-1])
-    print(urutan)
+    urutan = int(req.split('/')[4])
 
     client = FastSerializer("localhost", 49154) ## Sesuaikan port dengan container di docker
 
@@ -61,9 +59,8 @@ def submit_jawaban(request):
 
     username = request.session['username']
 
-    # username = "user1" ## GANTI USERNAME NYA JADI DARI SESSION
-
-    procSubmitJawaban = VoltProcedure( client, "SubmitJawaban", [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_STRING] )
+    procSubmitJawaban = VoltProcedure( client, "SubmitJawaban", 
+        [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_STRING] )
 
     procSubmitJawaban.call([username, soal, jawaban])
     if(urutan < 50):
