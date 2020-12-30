@@ -16,8 +16,10 @@ def soalPage(request, urutan):
 
     username = request.session['username']
 
+
     procGetSoal = VoltProcedure(client, "SelectSoalByUrutan", 
         [FastSerializer.VOLTTYPE_STRING, FastSerializer.VOLTTYPE_INTEGER])
+
     soal = procGetSoal.call([username, int(urutan)])
 
     tableSoal = soal.tables[0]
@@ -49,6 +51,7 @@ def soalPage(request, urutan):
 def submit_jawaban(request):
 
     req = request.META.get('HTTP_REFERER')
+
     urutan = int(req.split('/')[4])
 
     client = FastSerializer("localhost", 49154) ## Sesuaikan port dengan container di docker
