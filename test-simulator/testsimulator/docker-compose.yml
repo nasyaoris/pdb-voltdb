@@ -1,0 +1,12 @@
+version: "2"
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: test-simulator
+        container_name: voltdb-test-simulator
+        ports:
+            - "80:8000"
+        volumes:
+            - .:/code
